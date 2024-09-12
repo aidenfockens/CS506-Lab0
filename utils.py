@@ -29,7 +29,7 @@ def nearest_neighbor(target_vector, vectors):
     
     for i, vec in enumerate(vectors):
         similarity = cosine_similarity(target_vector, vec)
-        if similarity.any() > max_similarity.any():
+        if similarity > max_similarity:
             max_similarity = similarity
             best_index = i
     
