@@ -21,11 +21,11 @@ def test_cosine_similarity():
     assert np.isclose(result, expected_result), f"Expected {expected_result}, but got {result}"
 
 def test_nearest_neighbor():
-    data_points = np.array([[1, 2], [3, 4], [5, 6]])
-    query_point = np.array([3.1, 4.1])
+    data_points = np.array([[1, 1], [2, 2], [3, 3]])
+    query_point = np.array([2.5, 2.5])
     
-    result = nearest_neighbor(data_points, query_point)
+    result = nearest_neighbor(query_point, data_points)
     
-    expected_index = 1  # Since the second point [3, 4] is closest to the query point
+    expected_index = 1  # The vector [2, 2] should be the closest to [2.5, 2.5]
     
     assert result == expected_index, f"Expected index {expected_index}, but got {result}"
