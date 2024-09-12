@@ -19,7 +19,7 @@ def cosine_similarity(v1, v2):
 
 def nearest_neighbor(target_vector, vectors):
     '''
-    target_vector is a vector of shape d.
+    target_vector is a vector of shape d. added extra change to make the pull work!
     vectors is a matrix of shape N x d.
     return the row index of the vector in vectors that is closest to 
     target_vector in terms of cosine similarity.
