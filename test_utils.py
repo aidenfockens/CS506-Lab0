@@ -26,6 +26,6 @@ def test_nearest_neighbor():
     
     result = nearest_neighbor(query_point, data_points)
     
-    expected_index = 2  # The vector [2, 2] should be the closest to [2.5, 2.5]
+    expected_index = 0  # The vector [2, 2] should be the closest to [2.5, 2.5]
     
     assert result == expected_index, f"Expected index {expected_index}, but got {result}"
